@@ -4,13 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,400;1,800&display=swap"
       rel="stylesheet"
-    />
+    /> -->
+    <link rel="stylesheet" href="./fonts/style.css" />
     <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   </head>
   <body>
     <!-- <button class="cta-primary">Submit</button>
@@ -390,19 +392,57 @@
           </div>
         </div>
       </div>
-      <div class="slider">
-        <div class="container">
-          <div class="slider__card">
-            <div class="slider__card-img">
-              <img src="./images/slide-1.png" alt="" />
+      <div class="card">
+        <div class="card__slider">
+          <div>
+            <div class="container">
+              <div class="card__box">
+                <div class="card__box-img">
+                  <img src="./images/slide-1.png" alt="" />
+                </div>
+                <div class="card__box-content">
+                  <img class="card__box-quote" src="./images/quote.svg" alt="" />
+                  <h3 class="card__box-title">Abbie Harvey</h3>
+                  <p class="card__box-desc">
+                    I have been caring for my mom & dad off and on for about 10 years now, and I know the importance of
+                    me being there for appointments. Older people need attention, love and care that they truly deserve.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="slider__card-content">
-              <img class="slider__card-quote" src="./images/quote.svg" alt="" />
-              <h3 class="slider__card-title">Abbie Harvey</h3>
-              <p class="slider__card-desc">
-                I have been caring for my mom & dad off and on for about 10 years now, and I know the importance of me
-                being there for appointments. Older people need attention, love and care that they truly deserve.
-              </p>
+          </div>
+          <div>
+            <div class="container">
+              <div class="card__box">
+                <div class="card__box-img">
+                  <img src="./images/slide-1.png" alt="" />
+                </div>
+                <div class="card__box-content">
+                  <img class="card__box-quote" src="./images/quote.svg" alt="" />
+                  <h3 class="card__box-title">Abbie Harvey</h3>
+                  <p class="card__box-desc">
+                    I have been caring for my mom & dad off and on for about 10 years now, and I know the importance of
+                    me being there for appointments. Older people need attention, love and care that they truly deserve.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="container">
+              <div class="card__box">
+                <div class="card__box-img">
+                  <img src="./images/slide-1.png" alt="" />
+                </div>
+                <div class="card__box-content">
+                  <img class="card__box-quote" src="./images/quote.svg" alt="" />
+                  <h3 class="card__box-title">Abbie Harvey</h3>
+                  <p class="card__box-desc">
+                    I have been caring for my mom & dad off and on for about 10 years now, and I know the importance of
+                    me being there for appointments. Older people need attention, love and care that they truly deserve.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -541,7 +581,18 @@
           </div>
         </div>
       </footer>
+      <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+      <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
       <script src="./js/index.js"></script>
+      <script>
+        $(document).ready(function () {
+          $(".card__slider").slick({
+            arrows: false,
+            dots: true,
+          });
+        });
+      </script>
     </main>
   </body>
 </html>
