@@ -180,7 +180,7 @@ Slider.prototype = {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-  new Slider("categorySlider").init();
+  new Slider("slider").init();
 });
 
 // inspired by: https://output.jsbin.com/ufoceq/8/
