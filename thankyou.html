@@ -1,0 +1,73 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Thankyou Page</title>
+    <link rel="stylesheet" href="./fonts/style.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <style>
+      /* @import url(//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css);
+      @import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css); */
+    </style>
+  </head>
+  <body>
+    <header class="header header--solid">
+      <div class="container">
+        <div class="header__row">
+          <img class="header__logo" src="./images/logo.svg" alt="" />
+          <img class="header__hamburger" onclick="openMenu()" src="./images/hamburger.svg" alt="" />
+          <img class="header__close-menu" onclick="closeMenu()" src="./images/close-icon.svg" alt="" />
+          <div class="header__nav">
+            <nav>
+              <ul class="nav">
+                <li class="nav__li">
+                  <a class="nav__a nav__a--active" href="#"> HOME </a>
+                </li>
+                <li class="nav__li">
+                  <a class="nav__a" href="#"> ABOUT </a>
+                </li>
+                <li class="nav__li">
+                  <a class="nav__a" href="#"> CONTACT </a>
+                </li>
+              </ul>
+            </nav>
+            <a href="#" class="header__call"
+              >CALL NOW FOR A CONSULT <span class="header__call--num">XXX.XXX.XXXX</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="thankyou">
+        <div class="thankyou__content">
+          <h1>THANK YOU!</h1>
+          <img class="thankyou__tick" src="./images/green-tick.svg" alt="" />
+          <p class="thankyou__desc" data-lead-id="main-content-body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit deserunt possimus facilis eos iure incidunt
+            aliquam officia officiis doloremque corporis?
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer footer--thankyou">
+      <div class="container">
+        <div class="footer__row">
+          <div class="footer__col">
+            <p>@2019 Get an Intervention Inc. All rights reserved.</p>
+          </div>
+          <div class="footer__col">
+            <ul class="footer__links">
+              <li class="footer__li"><a href="#" class="footer__a">Privacy Policy</a></li>
+              <li class="footer__li"><a href="#" class="footer__a">Terms of use</a></li>
+              <li class="footer__li"><a href="#" class="footer__a">Site Map</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
