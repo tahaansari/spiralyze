@@ -39,6 +39,23 @@ h6 {
   font-family: $font-bold;
 }
 
+.heading-wrapper {
+  overflow: hidden;
+  h2{
+    position: relative;
+    display: inline-block;
+    &:after{
+      content: "";
+      position: absolute;
+      background:  rgba(234, 234, 234, 1);
+      width: 100vw;
+      height: 1px;
+      top: 50%;
+      left: calc(100% + 1rem);
+    }
+  }
+}
+
 $black: #333333;
 $white: #ffffff;
 $offwhite: #f5f5f5;

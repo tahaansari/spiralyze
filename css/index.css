@@ -29,6 +29,23 @@ h6 {
   font-family: "Montserrat Bold";
 }
 
+.heading-wrapper {
+  overflow: hidden;
+}
+.heading-wrapper h2 {
+  position: relative;
+  display: inline-block;
+}
+.heading-wrapper h2:after {
+  content: "";
+  position: absolute;
+  background: rgb(234, 234, 234);
+  width: 100vw;
+  height: 1px;
+  top: 50%;
+  left: calc(100% + 1rem);
+}
+
 .input-box {
   position: relative;
   padding-top: 1.3rem;
