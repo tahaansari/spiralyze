@@ -148,6 +148,11 @@ h6 {
   color: rgba(255, 255, 255, 0.7);
   appearance: none;
   font-size: 1.6rem;
+  outline: none;
+}
+.select-box option {
+  background-color: white;
+  color: black;
 }
 .select-box:before {
   content: "";
@@ -1440,7 +1445,7 @@ h6 {
   width: 7rem;
   height: 7rem;
   border-radius: 50%;
-  color: #FFF;
+  color: #fff;
   font-size: 20px;
   text-align: center;
   line-height: 7rem;
@@ -1709,6 +1714,13 @@ h6 {
   top: 50%;
   transform: translateY(-50%);
   z-index: 20;
+  cursor: pointer;
+}
+.slider__button path {
+  transition: 0.2s;
+}
+.slider__button:hover path {
+  fill: #5bc8af;
 }
 
 .slider__button--prev {
