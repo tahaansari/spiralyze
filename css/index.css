@@ -43,7 +43,7 @@ h6 {
   width: 100vw;
   height: 1px;
   top: 50%;
-  left: calc(100% + 1rem);
+  left: calc(100% + 2.7rem);
 }
 
 .input-box {
@@ -85,7 +85,6 @@ h6 {
   color: #ffffff;
   left: 0.8rem;
   padding: 0 0.8rem;
-  background-color: #2a7d6c;
 }
 .input-box__label {
   pointer-events: none;
@@ -113,6 +112,12 @@ h6 {
   margin-top: 1.2rem;
   z-index: 1;
   display: none;
+  max-width: 20rem;
+}
+@media (min-width: 768px) {
+  .input-box__error {
+    max-width: 100%;
+  }
 }
 .input-box__error::before {
   content: "";
@@ -684,24 +689,56 @@ h6 {
     width: calc(50% - 0.8rem);
   }
 }
+.contact__input-box:nth-child(1) .input-box__input:focus + .input-box__label,
+.contact__input-box:nth-child(1) .input-box__input:valid + .input-box__label {
+  background: #2b7869;
+}
 @media (min-width: 768px) {
   .contact__input-box:nth-child(1) {
     order: 1;
   }
+  .contact__input-box:nth-child(1) .input-box__input:focus + .input-box__label,
+  .contact__input-box:nth-child(1) .input-box__input:valid + .input-box__label {
+    background: #2d7565;
+  }
+}
+.contact__input-box:nth-child(2) .input-box__input:focus + .input-box__label,
+.contact__input-box:nth-child(2) .input-box__input:valid + .input-box__label {
+  background: #2d7466;
 }
 @media (min-width: 768px) {
   .contact__input-box:nth-child(2) {
     order: 3;
   }
+  .contact__input-box:nth-child(2) .input-box__input:focus + .input-box__label,
+  .contact__input-box:nth-child(2) .input-box__input:valid + .input-box__label {
+    background: #2f7161;
+  }
+}
+.contact__input-box:nth-child(3) .input-box__input:focus + .input-box__label,
+.contact__input-box:nth-child(3) .input-box__input:valid + .input-box__label {
+  background: #2d7163;
 }
 @media (min-width: 768px) {
   .contact__input-box:nth-child(3) {
     order: 2;
   }
+  .contact__input-box:nth-child(3) .input-box__input:focus + .input-box__label,
+  .contact__input-box:nth-child(3) .input-box__input:valid + .input-box__label {
+    background: #2e7666;
+  }
+}
+.contact__input-box:nth-child(4) .input-box__input:focus + .input-box__label,
+.contact__input-box:nth-child(4) .input-box__input:valid + .input-box__label {
+  background: #2e6e61;
 }
 @media (min-width: 768px) {
   .contact__input-box:nth-child(4) {
     order: 4;
+  }
+  .contact__input-box:nth-child(4) .input-box__input:focus + .input-box__label,
+  .contact__input-box:nth-child(4) .input-box__input:valid + .input-box__label {
+    background: #327164;
   }
 }
 .contact__submit {
@@ -893,6 +930,9 @@ h6 {
   display: flex;
   justify-content: space-between;
   grid-gap: 2.4rem;
+}
+.thumbnail__col {
+  flex: 1;
 }
 .thumbnail__img {
   width: 100%;
@@ -1373,7 +1413,7 @@ h6 {
   z-index: 1;
   top: 0;
   left: 50%;
-  transform: translate(-50%, -60%);
+  transform: translate(-50%, -85%);
   cursor: pointer;
 }
 @media (min-width: 768px) {
@@ -1382,7 +1422,7 @@ h6 {
   }
 }
 .video__ico-play svg {
-  width: 10rem;
+  width: 7rem;
 }
 @media (min-width: 768px) {
   .video__ico-play svg {
@@ -1397,20 +1437,23 @@ h6 {
 .video__ico-play::before {
   content: "";
   position: absolute;
-  width: 10rem;
-  height: 10rem;
+  width: 7rem;
+  height: 7rem;
   border-radius: 50%;
   color: #FFF;
   font-size: 20px;
   text-align: center;
-  line-height: 100px;
+  line-height: 7rem;
   font-family: sans-serif;
   text-transform: uppercase;
   animation: animate-pulse 3s linear infinite;
-  transform: translate(0px, 10px);
+  transform: translate(0px, 37%);
 }
 @media (min-width: 768px) {
   .video__ico-play::before {
+    width: 10rem;
+    height: 10rem;
+    line-height: 10rem;
     transform: translate(25px, 10px);
   }
 }
@@ -1510,13 +1553,29 @@ h6 {
     box-shadow: 0 0 0 0 #5bc8af, 0 0 0 0 #5bc8af;
   }
   40% {
-    box-shadow: 0 0 0 5rem rgba(255, 109, 74, 0), 0 0 0 0 #5bc8af;
+    box-shadow: 0 0 0 2rem rgba(255, 109, 74, 0), 0 0 0 0 #5bc8af;
   }
   80% {
-    box-shadow: 0 0 0 5rem rgba(255, 109, 74, 0), 0 0 0 30px rgba(255, 109, 74, 0);
+    box-shadow: 0 0 0 2rem rgba(255, 109, 74, 0), 0 0 0 30px rgba(255, 109, 74, 0);
   }
   100% {
     box-shadow: 0 0 0 0 rgba(255, 109, 74, 0), 0 0 0 30px rgba(255, 109, 74, 0);
+  }
+}
+@media (min-width: 768px) {
+  @keyframes animate-pulse {
+    0% {
+      box-shadow: 0 0 0 0 #5bc8af, 0 0 0 0 #5bc8af;
+    }
+    40% {
+      box-shadow: 0 0 0 4rem rgba(255, 109, 74, 0), 0 0 0 0 #5bc8af;
+    }
+    80% {
+      box-shadow: 0 0 0 4rem rgba(255, 109, 74, 0), 0 0 0 30px rgba(255, 109, 74, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(255, 109, 74, 0), 0 0 0 30px rgba(255, 109, 74, 0);
+    }
   }
 }
 .popup {
