@@ -231,7 +231,7 @@ $gray: rgba(117, 117, 117, 1);
     position: absolute;
     top: calc(100%);
     left: 50%;
-    width: calc(100% - 2.6rem);
+    width: calc(100% - 3.2rem);
     transform: translateX(-50%);
     color: $white;
     background: $primary-medium;
@@ -333,13 +333,15 @@ $gray: rgba(117, 117, 117, 1);
 .container {
   padding-left: 1.6rem;
   padding-right: 1.6rem;
+  // max-width: 540px;
+  margin: auto;
   @media (min-width: $breakpoint-tablet) {
     padding-left: 2.4rem;
     padding-right: 2.4rem;
+    // max-width: 992px;
   }
   @media (min-width: $breakpoint-desktop) {
     max-width: 123.3rem;
-    margin: auto;
   }
 }
 
@@ -748,8 +750,10 @@ $gray: rgba(117, 117, 117, 1);
   }
   @media (min-width: $breakpoint-tablet) {
     font-size: 1.4rem;
-    padding: 3.5rem 0;
-    
+    padding: 3.5rem 0;    
+  }
+  @media (min-width: $breakpoint-desktop) {
+    padding: 3.75rem 0;    
   }
   &__row {
     @media (min-width: $breakpoint-desktop) {
@@ -773,6 +777,9 @@ $gray: rgba(117, 117, 117, 1);
     grid-gap: 1.5rem;
     @media (min-width: $breakpoint-tablet) {
       padding-right: 0.5rem;
+    }
+    @media (min-width: $breakpoint-desktop) {
+      margin-top: 0;
     }
   }
   &__li {
@@ -1183,6 +1190,7 @@ $gray: rgba(117, 117, 117, 1);
     display: flex;
     flex-wrap: wrap;
     grid-gap: 1.6rem;
+    justify-content: center;
     @media (min-width: $breakpoint-tablet) {
       grid-gap: 2.4rem;
     }
@@ -1192,10 +1200,11 @@ $gray: rgba(117, 117, 117, 1);
   }
   &__tool-tip {
     width: 100%;
-    height: 9.6rem;
+    min-height: 9.6rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    max-width: 43rem;
     @media (min-width: $breakpoint-tablet) {
       width: calc(50% - 1.2rem);
     }
@@ -1218,7 +1227,7 @@ $gray: rgba(117, 117, 117, 1);
   @media (min-width: $breakpoint-desktop) {
     padding-top: 0;
     margin-top: 5rem;
-    background: url(../images/video-bg-desktop.svg) no-repeat left center/56% 100%;
+    background: url(../images/video-bg-desktop.svg) no-repeat left center/54% 100%;
   }
   &__row {
     @media (min-width: $breakpoint-desktop) {
@@ -1306,26 +1315,30 @@ $gray: rgba(117, 117, 117, 1);
     z-index: 1;
     top: 0;
     left: 50%;
-    transform: translate(-50%, -85%);
+    transform: translate(-50%, -88%);
     cursor: pointer;
     @media (min-width: $breakpoint-tablet) {
-      transform: translate(-50%, -80%);
+      transform: translate(-50%, -71%);
     }
+
     svg {
-      width: 7rem;
+      width: 12.8rem;
+      height: 12.8rem;
       @media (min-width: $breakpoint-tablet) {
-        width: 15.4rem;
+        width: 20rem;
+        height: 20rem;
       }
       @media (min-width: $breakpoint-desktop) {
-        width: 12rem;
+        width: 20.8rem;
+        height: 20.8rem;
       }
     }
 
     &::before {
       content: "";
       position: absolute;
-      width: 7rem;
-      height: 7rem;
+      width: 100%;
+      height: 100%;
       border-radius: 50%;
       color: #fff;
       font-size: 20px;
@@ -1333,18 +1346,28 @@ $gray: rgba(117, 117, 117, 1);
       line-height: 7rem;
       font-family: sans-serif;
       text-transform: uppercase;
-      animation: animate-pulse 3s linear infinite;
-      transform: translate(0px, 37%);
-      @media (min-width: $breakpoint-tablet) {
-        width: 10rem;
-        height: 10rem;
-        line-height: 10rem;
-        transform: translate(25px, 10px);
-      }
-      @media (min-width: $breakpoint-desktop) {
-        width: 12rem;
-        height: 12rem;
-        transform: translate(0px, 0px);
+      background: url(../images/Ellipse.svg) no-repeat center/contain;
+      z-index: -1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(1);
+      transition: .2s ;
+      // @media (min-width: $breakpoint-tablet) {
+      //   width: 10rem;
+      //   height: 10rem;
+      //   line-height: 10rem;
+      //   transform: translate(25px, 10px);
+      // }
+      // @media (min-width: $breakpoint-desktop) {
+      //   width: 12rem;
+      //   height: 12rem;
+      //   transform: translate(0px, 0px);
+      // }
+    }
+
+    &:hover{
+      &::before{
+        transform: translate(-50%, -50%) scale(1.2);
       }
     }
 
@@ -1353,7 +1376,7 @@ $gray: rgba(117, 117, 117, 1);
       bottom: auto;
       transform: translate(-50%, -50%);
       left: auto;
-      right: 15%;
+      right: 10.5%;
     }
   }
   &__container {
@@ -1364,15 +1387,17 @@ $gray: rgba(117, 117, 117, 1);
   }
   &__col-1 {
     position: relative;
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+    padding-top: 7.8rem;
+    padding-bottom: 11.2rem;
     @media (min-width: $breakpoint-tablet) {
       padding-top: 10rem;
-      padding-bottom: 7rem;
+      padding-bottom: 11.5rem;
     }
     @media (min-width: $breakpoint-desktop) {
       width: 50%;
       padding-right: 10rem;
+      padding-top: 10rem;
+      padding-bottom: 7rem;
     }
   }
   &__bottom {
@@ -1387,17 +1412,17 @@ $gray: rgba(117, 117, 117, 1);
     width: 100%;
     margin-top: -7.5rem;
     z-index: -1;
-    height: 30.1rem;
+    height: 27rem;
     object-fit: cover;
     @media (min-width: $breakpoint-tablet) {
-      height: 51.2rem;
+      height: 47rem;
       margin-top: -7rem;
     }
     @media (min-width: $breakpoint-desktop) {
       margin-top: 0;
       width: 100%;
       position: absolute;
-      width: 50%;
+      width: 52%;
       height: 100%;
       top: 0;
       right: 0;
@@ -1414,38 +1439,6 @@ $gray: rgba(117, 117, 117, 1);
       left: auto;
       right: 3.5rem;
       bottom: 3.5rem;
-    }
-  }
-}
-
-@keyframes animate-pulse {
-  0% {
-    box-shadow: 0 0 0 0 $primary-light, 0 0 0 0 $primary-light;
-  }
-  40% {
-    box-shadow: 0 0 0 2rem rgba(255, 109, 74, 0), 0 0 0 0 $primary-light;
-  }
-  80% {
-    box-shadow: 0 0 0 2rem rgba(255, 109, 74, 0), 0 0 0 30px rgba(255, 109, 74, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(255, 109, 74, 0), 0 0 0 30px rgba(255, 109, 74, 0);
-  }
-}
-
-@media (min-width: $breakpoint-tablet) {
-  @keyframes animate-pulse {
-    0% {
-      box-shadow: 0 0 0 0 $primary-light, 0 0 0 0 $primary-light;
-    }
-    40% {
-      box-shadow: 0 0 0 4rem rgba(255, 109, 74, 0), 0 0 0 0 $primary-light;
-    }
-    80% {
-      box-shadow: 0 0 0 4rem rgba(255, 109, 74, 0), 0 0 0 30px rgba(255, 109, 74, 0);
-    }
-    100% {
-      box-shadow: 0 0 0 0 rgba(255, 109, 74, 0), 0 0 0 30px rgba(255, 109, 74, 0);
     }
   }
 }
