@@ -157,7 +157,11 @@ Slider.prototype = {
       this.slideList.style.left = -1 * this.current * 100 + "%";
     }
 
-    document.querySelector(".slider-pager__item :nth-child(" + this.current + ")").classList.add("active");
+    if (document.querySelector(".slider-pager__item.active")) {
+      document.querySelector(".slider-pager__item.active").classList.remove("active");
+    }
+
+    document.querySelector(".slider-pager__item:nth-child(" + this.current + ")").classList.add("active");
   },
 };
 
