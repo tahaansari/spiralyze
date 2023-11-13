@@ -1754,6 +1754,9 @@ h6 {
   margin: 0 1.6rem;
   background-color: #fff;
 }
+.slider-pager__item.active {
+  background-color: #5bc8af;
+}
 
 .slider__controls .slider__button {
   display: none;

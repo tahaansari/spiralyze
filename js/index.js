@@ -157,7 +157,7 @@ Slider.prototype = {
       this.slideList.style.left = -1 * this.current * 100 + "%";
     }
 
-    document.querySelector(".slider-pager__item :nth-child(" + this.current + ")").classList.add("myactive");
+    document.querySelector(".slider-pager__item :nth-child(" + this.current + ")").classList.add("active");
   },
 };
 
