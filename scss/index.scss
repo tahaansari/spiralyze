@@ -721,16 +721,7 @@ $gray: rgba(117, 117, 117, 1);
         }
       }
     }
-    // &:nth-child(5) {
-    //   @media (min-width: $breakpoint-tablet) {
-    //     order: 5;
-    //   }
-    // }
-    // &:nth-child(6) {
-    //   @media (min-width: $breakpoint-tablet) {
-    //     order: 6;
-    //   }
-    // }
+    
   }
   &__submit {
     width: 100%;
@@ -877,32 +868,6 @@ $gray: rgba(117, 117, 117, 1);
         }
       }
     }
-    // p {
-    //   margin-bottom: 2rem;
-    //   // float: left;
-    //   @media (min-width: $breakpoint-tablet) {
-    //     margin-bottom: 3.4rem;
-    //     margin-right: 2.2rem;
-    //     width: calc(50% - 2.2rem);
-    //     &:nth-child(2n) {
-    //       margin-right: 0;
-    //       width: 50%;
-    //     }
-    //   }
-    //   @media (min-width: $breakpoint-desktop) {
-    //     width: 30%;
-    //     margin-bottom: 0;
-    //     margin-right: 3.6rem;
-    //     &:nth-child(2n) {
-    //       margin-right: 3.6rem;
-    //       width: 30%;
-    //     }
-    //     &:last-of-type {
-    //       margin-right: 0;
-    //       width: 32%;
-    //     }
-    //   }
-    // }
   }
   &__cta {
     font-family: $font-bold;

@@ -29,7 +29,6 @@ var Slider = function (id) {
   this.slideListItems = this.slider.getElementsByClassName("js-slide-list-item");
   this.slideWidth = this.slideListItems[0].offsetWidth;
   this.slidesLength = this.slideListItems.length;
-  // Means we're at slide 0 (Slide 1)
   this.current = 1;
   this.direction;
   this.animating = false;
@@ -64,7 +63,6 @@ Slider.prototype = {
     var firstSlideClone = firstSlide.cloneNode(true);
     var lastSlideClone = lastSlide.cloneNode(true);
 
-    // Remove data-slide-index for pager items to choose correct target
     firstSlideClone.removeAttribute("data-slide-index");
     lastSlideClone.removeAttribute("data-slide-index");
 
@@ -124,20 +122,6 @@ Slider.prototype = {
       step: function (delta) {
         var direction = pos > newPos ? 1 : -1;
         element.style.left = pos + Math.abs(newPos - pos) * delta * direction * -1 + "%";
-
-        // PREV
-        // Direction: -1
-        // Pos = -600
-        // newPos = 0
-        // Ex: Slide 4 (0px) <- Slide 1 (-600px)
-        //element.style.left = -600  + Math.abs(0 - (-600)) * 0.021 * -1 * -1+ 'px';
-
-        // NEXT
-        // Direction: +1
-        // Pos = -600
-        // newPos = -1200
-        // Next: Slide 1 (-600px) -> Slide 2 (-1200px)
-        //element.style.left = -600  + Math.abs( -600 - (-1200) ) * 0.021 * 1 * -1 + 'px';
       },
     });
   },
@@ -166,14 +150,10 @@ Slider.prototype = {
   checkCurrentSlide: function () {
     var cycle = false;
     //this.current += this.direction;
-    // Are we at the cloned slides?
     cycle = !!(this.current === 0 || this.current > this.slidesLength);
     if (cycle) {
       // update current in order to adapt new slide list
-      // we'll use current value to relocate slide list
       this.current = this.current === 0 ? this.slidesLength : 1;
-      // For 4 x 600px slides,
-      // left pos will be either -600px (first slide clone -> first slide)       // or -2400px (last slide clone -> fourth slide)
       this.slideList.style.left = -1 * this.current * 100 + "%";
     }
   },
@@ -182,5 +162,3 @@ Slider.prototype = {
 document.addEventListener("DOMContentLoaded", function () {
   new Slider("slider").init();
 });
-
-// inspired by: https://output.jsbin.com/ufoceq/8/
