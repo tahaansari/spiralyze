@@ -1339,7 +1339,7 @@ $gray: rgba(117, 117, 117, 1);
     z-index: 1;
     top: 0;
     left: 50%;
-    transform: translate(-50%, -21%);
+    transform: translate(-50%, -8%);
     cursor: pointer;
     @media (min-width: $breakpoint-tablet) {
       transform: translate(-50%,-24%);
@@ -1432,7 +1432,7 @@ $gray: rgba(117, 117, 117, 1);
   }
   &__bottom-img {
     position: relative;
-    padding-bottom: 77.77%;
+    padding-bottom: 82.77%;
     margin-top: -9.5rem;
     z-index: -1;
     img{

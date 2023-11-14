@@ -1460,7 +1460,7 @@ h6 {
   z-index: 1;
   top: 0;
   left: 50%;
-  transform: translate(-50%, -21%);
+  transform: translate(-50%, -8%);
   cursor: pointer;
 }
 @media (min-width: 768px) {
@@ -1554,7 +1554,7 @@ h6 {
 }
 .video__bottom-img {
   position: relative;
-  padding-bottom: 77.77%;
+  padding-bottom: 82.77%;
   margin-top: -9.5rem;
   z-index: -1;
 }
