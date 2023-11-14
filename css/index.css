@@ -1658,6 +1658,7 @@ h6 {
 @media (min-width: 1440px) {
   .slider {
     height: 27rem;
+    max-width: 98rem;
   }
 }
 

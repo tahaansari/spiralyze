@@ -1525,6 +1525,7 @@ $gray: rgba(117, 117, 117, 1);
   }
   @media (min-width: $breakpoint-desktop) {
     height: 27rem;
+    max-width: 98rem;
   }
 }
 .slider__wrapper {
