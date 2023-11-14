@@ -338,13 +338,19 @@
           <div class="thumbnail">
             <div class="thumbnail__row">
               <div class="thumbnail__col">
-                <img class="thumbnail__img" src="./images/about-img-1.png" alt="" />
+                <div class="thumbnail__img">
+                  <img src="./images/about-img-1.png" alt="" />
+                </div>
               </div>
               <div class="thumbnail__col">
-                <img class="thumbnail__img" src="./images/about-img-2.png" alt="" />
+                <div class="thumbnail__img">
+                  <img src="./images/about-img-2.png" alt="" />
+                </div>
               </div>
               <div class="thumbnail__col">
-                <img class="thumbnail__img" src="./images/about-img-3.png" alt="" />
+                <div class="thumbnail__img">
+                  <img src="./images/about-img-3.png" alt="" />
+                </div>
               </div>
             </div>
           </div>
@@ -584,6 +590,19 @@
           </div>
         </div>
         <div class="video__bottom">
+          <span class="video__ico-play" onclick="openPopup()">
+            <svg width="228" height="228" viewBox="0 0 228 228" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="114" cy="114" r="76.0751" fill="#5BC8AF" fill-opacity="0.8" stroke="white" stroke-width="2" />
+              <path
+                d="M134.619 110.354C137.286 111.894 137.286 115.743 134.619 117.283L103.494 135.253C100.827 136.792 97.4939 134.868 97.4939 131.789L97.4939 95.8482C97.4939 92.769 100.827 90.8445 103.494 92.3841L134.619 110.354Z"
+                fill="white"
+              />
+            </svg>
+          </span>
+          <div class="video__bottom-img">
+            <img src="./images/video-thumbnail-desktop.png" alt="" />
+          </div>
+          <img class="video__bottom-logo" src="./images/video-logo.svg" alt="" />
           <div id="video-popup" class="popup">
             <div class="popup__container">
               <span class="popup__close" onclick="closePopup()">
@@ -606,17 +625,6 @@
               </div>
             </div>
           </div>
-          <span class="video__ico-play" onclick="openPopup()">
-            <svg width="228" height="228" viewBox="0 0 228 228" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="114" cy="114" r="76.0751" fill="#5BC8AF" fill-opacity="0.8" stroke="white" stroke-width="2" />
-              <path
-                d="M134.619 110.354C137.286 111.894 137.286 115.743 134.619 117.283L103.494 135.253C100.827 136.792 97.4939 134.868 97.4939 131.789L97.4939 95.8482C97.4939 92.769 100.827 90.8445 103.494 92.3841L134.619 110.354Z"
-                fill="white"
-              />
-            </svg>
-          </span>
-          <img class="video__bottom-img" src="./images/video-thumbnail-desktop.png" alt="" />
-          <img class="video__bottom-logo" src="./images/video-logo.svg" alt="" />
         </div>
       </div>
       <footer class="footer">

@@ -30,6 +30,10 @@ body {
   font-size: 1.4rem;
 }
 
+img{
+  max-width: 100%;
+}
+
 h1,
 h2,
 h3,
@@ -764,7 +768,7 @@ $gray: rgba(117, 117, 117, 1);
   }
   @media (min-width: $breakpoint-tablet) {
     font-size: 1.4rem;
-    padding: 3.5rem 0;    
+    padding: 3rem 0;    
   }
   @media (min-width: $breakpoint-desktop) {
     padding: 3.75rem 0;    
@@ -920,15 +924,20 @@ $gray: rgba(117, 117, 117, 1);
     flex: 1;
   }
   &__img {
-    width: 100%;
-    height: 12.8rem;
-    object-fit: cover;
-    border-radius: 0.8rem;
-    @media (min-width: $breakpoint-tablet) {
-      height: 12.8rem;
+    position: relative;
+    padding-bottom: 57.14%;
+    
+    img{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0.8rem;
     }
+    // @media (min-width: $breakpoint-tablet) {
+    // }
     @media (min-width: $breakpoint-desktop) {
-      height: 18rem;
+      padding-bottom: 48.51%;
     }
   }
 }
@@ -1022,6 +1031,7 @@ $gray: rgba(117, 117, 117, 1);
     @media (min-width: $breakpoint-tablet) {
       margin-right: 2.3rem;
       padding-left: 0;
+      flex-shrink: 0;
     }
     @media (min-width: $breakpoint-desktop) {
       margin-right: 3.6rem;
@@ -1141,7 +1151,7 @@ $gray: rgba(117, 117, 117, 1);
     padding-bottom: 5rem;
   }
   @media (min-width: $breakpoint-desktop) {
-    padding-top: 5rem;
+    padding-top: 4.5rem;
     padding-bottom: 5rem;
   }
   &__title {
@@ -1329,12 +1339,15 @@ $gray: rgba(117, 117, 117, 1);
     z-index: 1;
     top: 0;
     left: 50%;
-    transform: translate(-50%, -88%);
+    transform: translate(-50%, -21%);
     cursor: pointer;
     @media (min-width: $breakpoint-tablet) {
-      transform: translate(-50%, -71%);
+      transform: translate(-50%,-24%);
     }
-
+    @media (min-width: $breakpoint-desktop) {
+      top: 50%;
+      transform: translate(-43%,-50%);
+    }
     svg {
       width: 12.8rem;
       height: 12.8rem;
@@ -1384,14 +1397,6 @@ $gray: rgba(117, 117, 117, 1);
         transform: translate(-50%, -50%) scale(1.2);
       }
     }
-
-    @media (min-width: $breakpoint-desktop) {
-      top: 50%;
-      bottom: auto;
-      transform: translate(-50%, -50%);
-      left: auto;
-      right: 10.5%;
-    }
   }
   &__top {
     background: url(../images/video-bg.svg) no-repeat center/100% 100%;
@@ -1402,7 +1407,7 @@ $gray: rgba(117, 117, 117, 1);
   &__col-1 {
     position: relative;
     padding-top: 7.8rem;
-    padding-bottom: 11.2rem;
+    padding-bottom: 10.5rem;
     @media (min-width: $breakpoint-tablet) {
       padding-top: 10rem;
       padding-bottom: 11.5rem;
@@ -1418,30 +1423,45 @@ $gray: rgba(117, 117, 117, 1);
     position: relative;
     line-height: 0;
     @media (min-width: $breakpoint-desktop) {
-      position: static;
+      position: absolute;
+      width: 52%;
+      right: 0;
+      top: 0;
+      height: 100%;
     }
   }
   &__bottom-img {
     position: relative;
-    width: 100%;
-    margin-top: -7.5rem;
+    padding-bottom: 77.77%;
+    margin-top: -9.5rem;
     z-index: -1;
-    height: 27rem;
-    object-fit: cover;
+    img{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      @media (min-width: $breakpoint-desktop) {
+        position: relative;
+      }
+    }
     @media (min-width: $breakpoint-tablet) {
-      height: 47rem;
-      margin-top: -7rem;
+      padding-bottom: 64.5%;
     }
     @media (min-width: $breakpoint-desktop) {
-      margin-top: 0;
-      width: 100%;
-      position: absolute;
-      width: 52%;
+      padding-bottom: 0;
       height: 100%;
-      top: 0;
-      right: 0;
-      object-fit: cover;
+      margin-top: 0;
     }
+    // @media (min-width: $breakpoint-desktop) {
+    //   margin-top: 0;
+    //   width: 100%;
+    //   position: absolute;
+    //   width: 52%;
+    //   height: 100%;
+    //   top: 0;
+    //   right: 0;
+    //   object-fit: cover;
+    // }
   }
   &__bottom-logo {
     position: absolute;
